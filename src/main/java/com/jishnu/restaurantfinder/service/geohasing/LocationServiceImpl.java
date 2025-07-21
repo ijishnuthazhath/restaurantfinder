@@ -2,23 +2,34 @@ package com.jishnu.restaurantfinder.service.geohasing;
 
 import com.jishnu.restaurantfinder.exception.CoordinatesOutOfBoundException;
 import com.jishnu.restaurantfinder.service.LocationService;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
 
+/**
+ * This is a service that contains the logic to calcuate the geo hash from coordinates.
+ */
 @Service
 public class LocationServiceImpl implements LocationService {
 
-    private static final long quadLimit = 10000;
+    // This is the max limit for coordinates.
+    @Value("${geo.hashing.quad.limit}")
+    private long quadLimit;
 
+    // Base32 encoding chars
     private static final String BASE32_ALPHABET = "0123456789bcdefghjkmnpqrstuvwxyz";
     private static final char[] BASE32_CHARS = BASE32_ALPHABET.toCharArray();
 
+    // This determines the geo-hashing precision and depth
     private static final int precision = 3;
+
+    // We normalize the huge plain into a smaller space.
     private static final double boundsX = 1.0;
     private static final double boundsY = 1.0;
+
     private static final int depthLimit = precision * 5 / 2;
     private static final double cellSize = boundsX / (double)depthLimit;
 

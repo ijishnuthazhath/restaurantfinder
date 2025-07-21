@@ -1,0 +1,283 @@
+{
+  "locations": [
+    {
+      "name": "Restaurant_1000",
+      "type": "Restaurant",
+      "id": "87d1c4d1-4855-4e87-8eb8-12883d9a4865",
+      "opening-hours": "10:00AM-11:00PM",
+      "image": "https://tinyurl.com",
+      "coordinates": "x=8152,y=9118",
+      "radius": 1
+    },
+    {
+      "name": "Restaurant_4974",
+      "type": "Restaurant",
+      "id": "3027c8fc-4cb6-4fa5-96a4-0ab133ddd285",
+      "opening-hours": "10:00AM-11:00PM",
+      "image": "https://tinyurl.com/example-image",
+      "coordinates": "x=5802,y=2780",
+      "radius": 140
+    },
+    {
+      "name": "Restaurant_4975",
+      "type": "Restaurant",
+      "id": "627cafed-0b85-49e9-9768-47c2d214f0df",
+      "opening-hours": "10:00AM-11:00PM",
+      "image": "https://tinyurl.com/example-image",
+      "coordinates": "x=8062,y=6397",
+      "radius": 130
+    },
+    {
+      "name": "Restaurant_4976",
+      "type": "Restaurant",
+      "id": "c9a5b3fb-ba97-48b9-bc98-55e2742205d5",
+      "opening-hours": "10:00AM-11:00PM",
+      "image": "https://tinyurl.com/example-image",
+      "coordinates": "x=8846,y=6743",
+      "radius": 233
+    },
+    {
+      "name": "Restaurant_4977",
+      "type": "Restaurant",
+      "id": "aff557a2-1b11-4741-99c4-511ed4dac958",
+      "opening-hours": "10:00AM-11:00PM",
+      "image": "https://tinyurl.com/example-image",
+      "coordinates": "x=8611,y=1230",
+      "radius": 324
+    },
+    {
+      "name": "Restaurant_4978",
+      "type": "Restaurant",
+      "id": "a0971766-6fb2-4ed1-85e8-42285d8a73f1",
+      "opening-hours": "10:00AM-11:00PM",
+      "image": "https://tinyurl.com/example-image",
+      "coordinates": "x=6523,y=1789",
+      "radius": 219
+    },
+    {
+      "name": "Restaurant_4979",
+      "type": "Restaurant",
+      "id": "bb1828c5-d241-4842-8216-4e59f4b63ee5",
+      "opening-hours": "10:00AM-11:00PM",
+      "image": "https://tinyurl.com/example-image",
+      "coordinates": "x=3261,y=1229",
+      "radius": 247
+    },
+    {
+      "name": "Restaurant_4980",
+      "type": "Restaurant",
+      "id": "700de7b4-81fb-41ea-8523-7864c70f93ed",
+      "opening-hours": "10:00AM-11:00PM",
+      "image": "https://tinyurl.com/example-image",
+      "coordinates": "x=8970,y=6564",
+      "radius": 211
+    },
+    {
+      "name": "Restaurant_4981",
+      "type": "Restaurant",
+      "id": "900bbe36-fe5f-43ce-a5e5-263dd9fbc0cb",
+      "opening-hours": "10:00AM-11:00PM",
+      "image": "https://tinyurl.com/example-image",
+      "coordinates": "x=5201,y=5537",
+      "radius": 170
+    },
+    {
+      "name": "Restaurant_4982",
+      "type": "Restaurant",
+      "id": "610d1071-9563-45e2-bd0a-f1ce2a72823f",
+      "opening-hours": "10:00AM-11:00PM",
+      "image": "https://tinyurl.com/example-image",
+      "coordinates": "x=6245,y=3744",
+      "radius": 289
+    },
+    {
+      "name": "Restaurant_4983",
+      "type": "Restaurant",
+      "id": "eac714ce-67d9-453e-9717-f5e84b468d49",
+      "opening-hours": "10:00AM-11:00PM",
+      "image": "https://tinyurl.com/example-image",
+      "coordinates": "x=8575,y=1791",
+      "radius": 361
+    },
+    {
+      "name": "Restaurant_4984",
+      "type": "Restaurant",
+      "id": "e6d03577-e3a4-4b2f-a055-25ec7ad6e9ea",
+      "opening-hours": "10:00AM-11:00PM",
+      "image": "https://tinyurl.com/example-image",
+      "coordinates": "x=6925,y=9672",
+      "radius": 335
+    },
+    {
+      "name": "Restaurant_4985",
+      "type": "Restaurant",
+      "id": "88cd61a0-5d89-4f01-8adb-03600451e8f2",
+      "opening-hours": "10:00AM-11:00PM",
+      "image": "https://tinyurl.com/example-image",
+      "coordinates": "x=5718,y=9727",
+      "radius": 208
+    },
+    {
+      "name": "Restaurant_4986",
+      "type": "Restaurant",
+      "id": "a4507b65-ad90-44f1-ac29-f5b66f25ee00",
+      "opening-hours": "10:00AM-11:00PM",
+      "image": "https://tinyurl.com/example-image",
+      "coordinates": "x=4304,y=8006",
+      "radius": 248
+    },
+    {
+      "name": "Restaurant_4987",
+      "type": "Restaurant",
+      "id": "e151302a-d6e6-4285-88b7-df3632297a03",
+      "opening-hours": "10:00AM-11:00PM",
+      "image": "https://tinyurl.com/example-image",
+      "coordinates": "x=4203,y=6965",
+      "radius": 123
+    },
+    {
+      "name": "Restaurant_4988",
+      "type": "Restaurant",
+      "id": "eb35474b-b0e2-4873-b2a5-4420350fcb25",
+      "opening-hours": "10:00AM-11:00PM",
+      "image": "https://tinyurl.com/example-image",
+      "coordinates": "x=1168,y=705",
+      "radius": 375
+    },
+    {
+      "name": "Restaurant_4989",
+      "type": "Restaurant",
+      "id": "4412c682-cc27-42db-88f3-967d122742a1",
+      "opening-hours": "10:00AM-11:00PM",
+      "image": "https://tinyurl.com/example-image",
+      "coordinates": "x=2150,y=9977",
+      "radius": 226
+    },
+    {
+      "name": "Restaurant_4990",
+      "type": "Restaurant",
+      "id": "8838687e-3538-496f-8674-c15dd8a377cf",
+      "opening-hours": "10:00AM-11:00PM",
+      "image": "https://tinyurl.com/example-image",
+      "coordinates": "x=8630,y=9220",
+      "radius": 184
+    },
+    {
+      "name": "Restaurant_4991",
+      "type": "Restaurant",
+      "id": "28df0f60-c1d7-49c5-bef2-85f67b96a55d",
+      "opening-hours": "10:00AM-11:00PM",
+      "image": "https://tinyurl.com/example-image",
+      "coordinates": "x=1391,y=8905",
+      "radius": 119
+    },
+    {
+      "name": "Restaurant_4992",
+      "type": "Restaurant",
+      "id": "9aeeaca3-e56c-4885-91f2-bc75deb4c5f6",
+      "opening-hours": "10:00AM-11:00PM",
+      "image": "https://tinyurl.com/example-image",
+      "coordinates": "x=1551,y=5786",
+      "radius": 485
+    },
+    {
+      "name": "Restaurant_4993",
+      "type": "Restaurant",
+      "id": "5bfef9c4-0300-4bfe-9780-08b7e5043150",
+      "opening-hours": "10:00AM-11:00PM",
+      "image": "https://tinyurl.com/example-image",
+      "coordinates": "x=1394,y=322",
+      "radius": 396
+    },
+    {
+      "name": "Restaurant_4994",
+      "type": "Restaurant",
+      "id": "355a9b21-fe68-4779-ae79-0d12bb4ad9d3",
+      "opening-hours": "10:00AM-11:00PM",
+      "image": "https://tinyurl.com/example-image",
+      "coordinates": "x=1166,y=7109",
+      "radius": 189
+    },
+    {
+      "name": "Restaurant_4995",
+      "type": "Restaurant",
+      "id": "d5747b30-8b9c-4029-a362-c8636f1374e8",
+      "opening-hours": "10:00AM-11:00PM",
+      "image": "https://tinyurl.com/example-image",
+      "coordinates": "x=230,y=4160",
+      "radius": 449
+    },
+    {
+      "name": "Restaurant_4996",
+      "type": "Restaurant",
+      "id": "28ef1cd4-fbeb-4842-8c85-eb2feaaedf4f",
+      "opening-hours": "10:00AM-11:00PM",
+      "image": "https://tinyurl.com/example-image",
+      "coordinates": "x=3758,y=5152",
+      "radius": 281
+    },
+    {
+      "name": "Restaurant_4997",
+      "type": "Restaurant",
+      "id": "66525cb5-4c55-439e-8490-bc0795284c0f",
+      "opening-hours": "10:00AM-11:00PM",
+      "image": "https://tinyurl.com/example-image",
+      "coordinates": "x=2585,y=915",
+      "radius": 324
+    },
+    {
+      "name": "Restaurant_4998",
+      "type": "Restaurant",
+      "id": "e38f52a4-19ce-41fa-89c0-13d39f50baaa",
+      "opening-hours": "10:00AM-11:00PM",
+      "image": "https://tinyurl.com/example-image",
+      "coordinates": "x=7127,y=1856",
+      "radius": 3
+    },
+    {
+      "name": "Restaurant_4999",
+      "type": "Restaurant",
+      "id": "be11166d-ed6a-4934-b114-520d43728923",
+      "opening-hours": "10:00AM-11:00PM",
+      "image": "https://tinyurl.com/example-image",
+      "coordinates": "x=5669,y=3353",
+      "radius": 401
+    },
+    {
+      "name": "Restaurant_Given_01",
+      "type": "Restaurant",
+      "id": "7c45ffc1-ab4b-4e4f-942f-44a0bdf68c4b",
+      "opening-hours": "10:00AM-11:00PM",
+      "image": "https://tinyurl.com",
+      "coordinates": "x=1,y=1",
+      "radius": 1
+    },
+    {
+      "name": "Restaurant_Given_02",
+      "type": "Restaurant",
+      "id": "7c45ffc1-ab4b-4e4f-943f-44a0bdf68c4b",
+      "opening-hours": "10:00AM-11:00PM",
+      "image": "https://tinyurl.com",
+      "coordinates": "x=2,y=2",
+      "radius": 2
+    },
+    {
+      "name": "Restaurant_Given_03",
+      "type": "Restaurant",
+      "id": "7c45ffc1-ab4b-4e4f-944f-44a0bdf68c4b",
+      "opening-hours": "10:00AM-11:00PM",
+      "image": "https://tinyurl.com",
+      "coordinates": "x=5,y=5",
+      "radius": 1
+    },
+    {
+      "name": "Restaurant_Given_04",
+      "type": "Restaurant",
+      "id": "7c45ffc1-ab4b-4e4f-945f-44a0bdf68c4b",
+      "opening-hours": "10:00AM-11:00PM",
+      "image": "https://tinyurl.com",
+      "coordinates": "x=2,y=3",
+      "radius": 5
+    }
+  ]
+}

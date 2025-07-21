@@ -12,6 +12,7 @@ services:
       SPRING_DATASOURCE_USERNAME: admin
       SPRING_DATASOURCE_PASSWORD: admin
       SPRING_PROFILES_ACTIVE: postgres
+      LOAD_TEST_DATA: true
 
   postgres:
     image: postgres:15
