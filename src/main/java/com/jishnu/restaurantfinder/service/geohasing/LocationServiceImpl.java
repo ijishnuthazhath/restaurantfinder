@@ -11,6 +11,7 @@ import java.util.Set;
 
 /**
  * This is a service that contains the logic to calcuate the geo hash from coordinates.
+ * This class uses the standard - one of the standard I guess, algorithms to find geo-hashes of coordinates
  */
 @Service
 public class LocationServiceImpl implements LocationService {
@@ -60,6 +61,13 @@ public class LocationServiceImpl implements LocationService {
         return Optional.of(geohash.substring(0, precision));
     }
 
+    /**
+     * This method is to compute all the cells the restaurant can reach. We need this because, we are not selecting restaurants x far away from user,
+     * instead we find all the restaurants which has user coordinates within its radius reach.
+     * This adds many geo-hashes for a single restaurant.
+     *
+     * TODO: Find a way to reduce the number of geo hashes per restaurant.
+     */
     @Override
     public Set<String> computeAllGeoHashesWithinGivenRadius(long centerX, long centerY, int radius) {
 
@@ -98,6 +106,10 @@ public class LocationServiceImpl implements LocationService {
             {-1,  1}, {0,  1}, {1,  1}
     };
 
+    /**
+     * This is for the user. This is one of the edge cases of geo-hashing where two close by restaurants could be in different cells.
+     * To tackle this, we add a safe-guard of getting neighbouring cells as well.
+     */
     @Override
     public Set<String> computeGeoHashesForNeighbours(long x, long y) {
         final Set<String> neighborsGeoHash = new HashSet<>();
