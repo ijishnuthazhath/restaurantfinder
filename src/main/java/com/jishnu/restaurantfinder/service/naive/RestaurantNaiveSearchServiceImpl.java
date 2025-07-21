@@ -1,13 +1,15 @@
-package com.jishnu.restaurantfinder.service;
+package com.jishnu.restaurantfinder.service.naive;
 
 import com.jishnu.restaurantfinder.entity.Restaurant;
 import com.jishnu.restaurantfinder.model.RestaurantSearchResponse;
 import com.jishnu.restaurantfinder.model.RestaurantSearchServiceResponseData;
 import com.jishnu.restaurantfinder.repository.RestaurantRepository;
+import com.jishnu.restaurantfinder.service.RestaurantSearchService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
+import java.util.Comparator;
 import java.util.List;
 
 @Service
@@ -31,6 +33,7 @@ public class RestaurantNaiveSearchServiceImpl implements RestaurantSearchService
                                 .coordinates("x=" + restaurant.getCoordinateX() + ",y=" + restaurant.getCoordinateY())
                                 .distance(euclideanDistance(restaurant.getCoordinateX(), restaurant.getCoordinateY(), ux, uy))
                                 .build())
+                .sorted(Comparator.comparingDouble(RestaurantSearchResponse::getDistance))
                 .toList();
 
         return RestaurantSearchServiceResponseData

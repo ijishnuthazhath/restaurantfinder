@@ -1,10 +1,12 @@
-package com.jishnu.restaurantfinder.service;
+package com.jishnu.restaurantfinder.service.geohasing;
 
 import com.jishnu.restaurantfinder.entity.RestaurantGeohash;
 import com.jishnu.restaurantfinder.model.RestaurantSearchResponse;
 import com.jishnu.restaurantfinder.model.RestaurantSearchServiceResponseData;
 import com.jishnu.restaurantfinder.repository.RestaurantGeohashRepository;
 import com.jishnu.restaurantfinder.repository.RestaurantRepository;
+import com.jishnu.restaurantfinder.service.LocationService;
+import com.jishnu.restaurantfinder.service.RestaurantSearchService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -38,7 +40,7 @@ public class RestaurantGeoHashSearchServiceImpl implements RestaurantSearchServi
                 .map(RestaurantGeohash::getRestaurantId)
                 .collect(Collectors.toSet());
 
-        final List<RestaurantSearchResponse> resList =  restaurantRepository.findAllById(restaurantIds)
+        final List<RestaurantSearchResponse> resList = restaurantRepository.findAllById(restaurantIds)
                 .stream()
                 .filter(r -> euclideanDistance(r.getCoordinateX(), r.getCoordinateY(), ux, uy) <= r.getDeliveryRadius())
                 .map(r -> RestaurantSearchResponse
@@ -48,6 +50,7 @@ public class RestaurantGeoHashSearchServiceImpl implements RestaurantSearchServi
                         .coordinates("x=" + r.getCoordinateX() + ",y=" + r.getCoordinateY())
                         .distance(euclideanDistance(r.getCoordinateX(), r.getCoordinateY(), ux, uy))
                         .build())
+                .sorted(Comparator.comparingDouble(RestaurantSearchResponse::getDistance))
                 .toList();
 
         return RestaurantSearchServiceResponseData

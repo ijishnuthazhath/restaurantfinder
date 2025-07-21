@@ -1,6 +1,7 @@
-package com.jishnu.restaurantfinder.service;
+package com.jishnu.restaurantfinder.service.geohasing;
 
 import com.jishnu.restaurantfinder.exception.CoordinatesOutOfBoundException;
+import com.jishnu.restaurantfinder.service.LocationService;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
