@@ -86,7 +86,7 @@ I choose a relational database - PostgreSQL here, because one - postgres is cool
 If this is the only requirement of this service, we could move the geohashes to a cache service and maybe store the restaurant details as documents. If we are expecting more relations and other entites then better off with a relational database. I say this with my limited knowledge.
 
 ## Improvements
-- Instead of using a table in the database to store the geo-hash, we could use a in-memory cache like Redis which would be faster.
+- Instead of using a table in the database to store the geo-hash, we could use a in-memory cache like Redis which would be faster - or maybe keep both.
 - I see the geo-hashing custom algoritm I wrote is not performing enough. Still needs improvements, but it works with the little testing I did. 
 
 ## Environment tested with
