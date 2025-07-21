@@ -89,4 +89,48 @@ If this is the only requirement of this service, we could move the geohashes to 
 - Instead of using a table in the database to store the geo-hash, we could use a in-memory cache like Redis which would be faster.
 - I see the geo-hashing custom algoritm I wrote is not performing enough. Still needs improvements, but it works with the little testing I did. 
 
+## Environment tested with
+```
+~ ❯ java -version                                                                                                                                                                                                                                                                                                   22:52:45
+openjdk version "21.0.2" 2024-01-16
+OpenJDK Runtime Environment Homebrew (build 21.0.2)
+OpenJDK 64-Bit Server VM Homebrew (build 21.0.2, mixed mode, sharing)
+```
+
+```
+~ ❯ docker --version                                                                                                                                                                                                                                                                                          ✘ 125 22:53:36
+Docker version 28.3.2, build 578ccf6
+```
+
+```
+~/dev/restaurantfinder main +4 !4 ❯ ./gradlew --version                                                                                                                                                                                                                                                             22:53:59
+
+------------------------------------------------------------
+Gradle 8.14.3
+------------------------------------------------------------
+
+Build time:    2025-07-04 13:15:44 UTC
+Revision:      e5ee1df3d88b8ca3a8074787a94f373e3090e1db
+
+Kotlin:        2.0.21
+Groovy:        3.0.24
+Ant:           Apache Ant(TM) version 1.10.15 compiled on August 25 2024
+Launcher JVM:  21.0.2 (Homebrew 21.0.2)
+Daemon JVM:    /opt/homebrew/Cellar/openjdk/21.0.2/libexec/openjdk.jdk/Contents/Home (no JDK specified, using current Java home)
+OS:            Mac OS X 15.5 aarch64
+```
+
+`PostgreSQL 15`
+
+```
+~/dev/restaurantfinder main +4 !4 ❯ system_profiler SPHardwareDataType                                                                                                                                                                                                                                              22:54:09
+    Hardware Overview:
+      Model Name: MacBook Pro
+      Model Identifier: MacBookPro17,1
+      Chip: Apple M1
+      Total Number of Cores: 8 (4 performance and 4 efficiency)
+      Memory: 16 GB
+      System Firmware Version: 11881.121.1
+      OS Loader Version: 11881.121.1
+```
 
