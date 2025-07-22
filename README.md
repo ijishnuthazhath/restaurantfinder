@@ -71,10 +71,11 @@ We use GeoHashing to find the hash of each restaurant coordinates and its radius
 This is like a lookup table to search for the related geohashes comparing with the user geohash. From that list, we filter by calulating the actual distance from the restaurant to the user - which should not exceed the restaurant radius. 
 This extra check is to make sure we do not send wrong results to the clients (I do not trust my creation yet. Needs more testing with loads of data). 
 
-I went with a geo-hashing algorightm instead of in-memory solutions like  a Quad-Tree is because geo-hashing is more scalable. Quad-Trees has to me stored in memory and we have to load the data when the service boots up. 
+I went with a geo-hashing algorithm instead of in-memory solutions like  a Quad-Tree is because geo-hashing is more scalable. Quad-Trees has to me stored in memory and we have to load the data when the service boots up. 
 There could be alternative approaches where we could store the quad-tree in the disk (that supports such datastrucure to be stored as is and queried from) and search it - not worth the effort.
 
 Another algorithm similar to geo-hashing is Hilbert Curve. Which could be a good solution here. Unfortunately I couldnt figure out the right algorithm (convert x,y -> Z) yet to implement - Still thinking about it.
+I think Hiberts Curve will perform much better in our case. We can store the 1D value in the database for each restaurant and then, we can do a range query on the user 1D value using the radius.
 
 Both the Geo-Hashing and Hiberts Curve algorithms convert 2D cordinates to 1D value, which is easier and efficient for geo proximity problems. 
 

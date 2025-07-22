@@ -109,6 +109,10 @@ public class LocationServiceImpl implements LocationService {
     /**
      * This is for the user. This is one of the edge cases of geo-hashing where two close by restaurants could be in different cells.
      * To tackle this, we add a safe-guard of getting neighbouring cells as well.
+     *
+     * Here we create a bounding-box using the radius, then add all the cells within that radius.
+     * Since its two different shapes, there is a slight margin of error here - when the cell is not completely in the radius.
+     * To make sure the cell is within the radius we call another method to measure and validate the distance.
      */
     @Override
     public Set<String> computeGeoHashesForNeighbours(long x, long y) {
@@ -129,6 +133,9 @@ public class LocationServiceImpl implements LocationService {
         return neighborsGeoHash;
     }
 
+    /**
+     * This method is used to make sure the points we identify is within the radius. If yes, then we can associate the goe-hash of the cell to the restaurant.
+     */
     private static boolean isWithinRadius(double x1, double y1, double x2, double y2, double radius) {
         double dx = x2 - x1;
         double dy = y2 - y1;
@@ -136,6 +143,10 @@ public class LocationServiceImpl implements LocationService {
     }
 
 
+    /**
+     * This is part of the geo-hashing algorithm where we create binary string for a single value x OR y.
+     * The range starts from 0 to 1 and then divided by 2 on each iteration. Each time we place the value in the particular cell it belongs.
+     */
     private static String convertToBinary(double value, double[] range) {
         final char[] binary = new char[depthLimit];
         for (int i = 0; i < depthLimit; i++) {
@@ -151,6 +162,11 @@ public class LocationServiceImpl implements LocationService {
         return new String(binary);
     }
 
+    /**
+     * This is also part of the geo-hashing algorithm.
+     * Here we interleave the binary strings of both x and y to get a string of len(xString) + len(yString).
+     * The length totally depends on the precision.
+     */
     private static String interweave(String stringX, String stringY) {
         final StringBuilder interwoven = new StringBuilder();
         for (int i = 0; i < stringX.length(); i++) {
@@ -159,6 +175,11 @@ public class LocationServiceImpl implements LocationService {
         return interwoven.toString();
     }
 
+    /**
+     * Once we have the interleaved string, we split it by blocks with 5 bits each.
+     * Then this 5 bit value is converted to decimal.
+     * This decimal corresponds to a value in the BASE 32 chars. We create a base32 string here.
+     */
     private static String binaryToBase32(final String binaryStr) {
         final StringBuilder base32Str = new StringBuilder();
         for (int i = 0; i < binaryStr.length(); i += 5) {
