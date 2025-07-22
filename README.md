@@ -59,8 +59,10 @@ com/jishnu/restaurantfinder/service/hilbert/RestaurantHilbertCurveSearchServiceI
 ### Testing
 Can load a json file with restaurant data during the application startup from a file in the classpath now. I know, but I guess this is enough for testing. I can think of a better approach. At the moment I did not spend much time with it.
 
-The idea is to add the json file like below and change the propery - `load.data.file=restaurants_data.json`
+The idea is to add the json file like below and change the property - `LOAD_TEST_DATA` in docker-compose.yml
 `src/main/resources/data/restaurants_data.json`
+
+Note that we have docker-compose with both our application and database. In an ideal world - we have these running separately. :D
 
 ## Technical Decisions
 
