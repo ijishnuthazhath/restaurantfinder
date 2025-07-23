@@ -84,6 +84,11 @@ Both the Geo-Hashing and Hiberts Curve algorithms convert 2D cordinates to 1D va
 There are geo-hashing libraries, redis supports geo-hashing and even postgres has a plugin. But our requirement is not in the context of actual latitude and longiture so I had to improvise and come up with something that suits our needs (which was painful to write btw.).
 Maybe the existing libraries supports such ranges other than lat and lan, but did not explore.
 
+### Limits
+I have added a set for quadrant limit. The max values x and y can have. You can always modify it. 
+`geo.hashing.quad.limit=100000000`
+
+
 ### The datastore
 I choose a relational database - PostgreSQL here, because one - postgres is cool. two, I know relational databases more and did not have enough time to explore and implement document database. 
 If this is the only requirement of this service, we could move the geohashes to a cache service and maybe store the restaurant details as documents. If we are expecting more relations and other entites then better off with a relational database. I say this with my limited knowledge.
