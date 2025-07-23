@@ -25,7 +25,7 @@ public class LocationServiceImpl implements LocationService {
     private static final char[] BASE32_CHARS = BASE32_ALPHABET.toCharArray();
 
     // This determines the geo-hashing precision and depth
-    private static final int precision = 3;
+    private static final int precision = 6;
 
     // We normalize the huge plain into a smaller space.
     private static final double boundsX = 1.0;

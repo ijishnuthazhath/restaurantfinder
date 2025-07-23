@@ -86,7 +86,12 @@ Maybe the existing libraries supports such ranges other than lat and lan, but di
 
 ### Limits
 I have added a set for quadrant limit. The max values x and y can have. You can always modify it. 
+When the numbers are huge smaller values tend to zero. So the hash will be zero for smaller precision. If you are increasing the limit, increase the precision too.
 `geo.hashing.quad.limit=100000000`
+
+Mind that increasing precision slows down the system a bot. 
+
+I did some very basic performance tuning for postgres. I took me around ~2 minutes to load ~1000 restaurants.
 
 
 ### The datastore
@@ -96,6 +101,7 @@ If this is the only requirement of this service, we could move the geohashes to 
 ## Improvements
 - Instead of using a table in the database to store the geo-hash, we could use a in-memory cache like Redis which would be faster - or maybe keep both.
 - I see the geo-hashing custom algoritm I wrote is not performing enough. Still needs improvements, but it works with the little testing I did. 
+More computation is needed during restaurant insertion. But how often are we going to do that in real life. I think this application is read heavy.
 
 ## Environment tested with
 ```
